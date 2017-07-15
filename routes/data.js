@@ -8,7 +8,16 @@ const clientSecret = 'pMjDZTGKtSBgfxmEzZgTTX3pVUSjTcrahyZXufTrURzgEfUAJM8kI47cW9
 const token = 'vhc3LfRXOJRwg94PSimh1QwIoMnQBI7Ylqol4bdKUXVL-FV-mYwlHF4SbnUGO29CEIlp4yfe6skkxK-ojieYzsaEFBJ9_mUTXgQaR-G6LFTmqbtlTpgsflqGW99KWXYx';
 
 const client = yelp.client(token);
-//let searchTerm = 'New York';
+
+/*myMiddlewareFunc = (req, res, next) => {
+  console.log("We ran baby!");
+  if(req.body.term === "food") {
+  } else {
+    next();
+  }
+}*/
+
+router.use(myMiddlewareFunc);
 
 router.post('/', function(req, res, next) {
     client.search({
