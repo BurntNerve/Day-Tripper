@@ -1,30 +1,23 @@
 .logo {
-    font-size: 2em;
-    color: #55acee;
+  font-size: 2em;
+  color: #55acee;
 }
-
-
-/*.navbar {
-	background-color: #00C4A7;
-}*/
 
 .jumbotron {
-    min-height: 50vh;
-    background: url(../images/dali.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  min-height: 50vh;
+  background: url(../images/dali.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-
 .title {
-	font-size: 6em;
-
+  font-size: 6em;
 }
 
 .subtitle {
-	color: red;
+  color: red;
   font-size: 4em;
 }
 
@@ -32,52 +25,38 @@
   color: white !important;
 }
 
-
 .get-started:hover {
-    color: white !important;
+  color: white !important;
 }
 
 .image {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
-/*@media only screen and (max-width: 320px) {
-
-	.jumbotron h1 {
-		font-size: 3em;
-		position: relative;
-		bottom: 45px;
-	}
-
-	.jumbotron h2 {
-		font-size: 2.5em;
-		position: relative;
-		bottom: 45px;
-	}
-}*/
 
 /*This will affect the Galaxy S5 with a width of 360px and the iPhone 5 with a width of 320px*/
+
 @media only screen and (max-width: 360px) and (min-width: 320px) {
   .title {
     font-size: 3em;
     position: relative;
-		bottom: 45px;
+    bottom: 45px;
   }
-
   .subtitle {
     font-size: 2em;
     position: relative;
-		bottom: 45px;
+    bottom: 45px;
   }
 }
 
+
 /*This will affect the Nexus 5X & Nexus 6P with widths of 412px and the iPhone 6 with a width of 375px
 as well as the iPhone 6 Plus with a width of 414px*/
+
 @media only screen and (max-width: 414px) and (min-width: 375px) {
   .title {
     font-size: 4em;
   }
-
   .subtitle {
     font-size: 2.5em;
   }

@@ -23,6 +23,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+//Middleware for routing.
 app.use('/', index);
 app.use('/users', users);
 app.use('/data', data);

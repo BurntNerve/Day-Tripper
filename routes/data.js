@@ -1,6 +1,7 @@
 
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const middlewares = require('./middlewares.js');
 
 const yelp = require('yelp-fusion');
 const clientId = 'zWM7p6Q2220lLqmTUE1jyg';
@@ -9,15 +10,8 @@ const token = 'vhc3LfRXOJRwg94PSimh1QwIoMnQBI7Ylqol4bdKUXVL-FV-mYwlHF4SbnUGO29CE
 
 const client = yelp.client(token);
 
-/*myMiddlewareFunc = (req, res, next) => {
-  console.log("We ran baby!");
-  if(req.body.term === "food") {
-  } else {
-    next();
-  }
-}*/
 
-router.use(myMiddlewareFunc);
+router.use(middlewares.myMiddlewareFunc);
 
 router.post('/', function(req, res, next) {
     client.search({
@@ -25,6 +19,7 @@ router.post('/', function(req, res, next) {
         location: req.body.location,
         limit: req.body.limit
     }).then(response => {
+        console.log("ME TOO");
         const firstResult = response.jsonBody.businesses;
         res.json(firstResult);
     }).catch(e => {
