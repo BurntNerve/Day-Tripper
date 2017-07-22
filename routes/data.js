@@ -20,7 +20,6 @@ router.post('/', function(req, res, next) {
       limit: req.body.limit
     })
     .then(response => {
-      console.log('ME TOO');
       const firstResult = response.jsonBody.businesses;
       res.json(firstResult);
     })
